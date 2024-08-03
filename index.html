@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool-Box Multifunzione</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <h1>Tool-Box</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Cerca uno strumento..." id="searchInput">
+        </div>
+    </header>
+
+    <main>
+        <div class="tool-boxes">
+            <!-- Matematica -->
+            <div class="tool-box" data-tool="matematica">
+                <button class="tool-button">Matematica</button>
+                <div class="tool-content">
+                    <!-- Calcolo Percentuale -->
+                    <div class="sub-tool-box">
+                        <button class="sub-tool-button">Calcolo Percentuale</button>
+                        <div class="sub-tool-content">
+                            <input type="number" id="numero" placeholder="Numero">
+                            <input type="number" id="percentuale" placeholder="Percentuale">
+                            <button onclick="calcolaPercentuale()">Calcola</button>
+                            <p>Risultato: <span id="risultatoPercentuale"></span></p>
+                        </div>
+                    </div>
+
+                    <!-- MCD -->
+                    <div class="sub-tool-box">
+                        <button class="sub-tool-button">MCD (Massimo Comune Divisore)</button>
+                        <div class="sub-tool-content">
+                            <input type="number" id="numero1" placeholder="Numero 1">
+                            <input type="number" id="numero2" placeholder="Numero 2">
+                            <button onclick="calcolaMCD()">Calcola</button>
+                            <p>Risultato: <span id="risultatoMCD"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conversioni Unità -->
+            <div class="tool-box" data-tool="conversioni">
+                <button class="tool-button">Conversioni Unità</button>
+                <div class="tool-content">
+                    <!-- Conversione Metri a Chilometri -->
+                    <div class="sub-tool-box">
+                        <button class="sub-tool-button">Metri a Chilometri</button>
+                        <div class="sub-tool-content">
+                            <input type="number" id="metri" placeholder="Metri">
+                            <button onclick="convertiMetriChilometri()">Converti</button>
+                            <p>Risultato: <span id="risultatoConversione"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Finanza -->
+            <div class="tool-box" data-tool="finanza">
+                <button class="tool-button">Finanza</button>
+                <div class="tool-content">
+                    <!-- Calcolo Interessi Semplici -->
+                    <div class="sub-tool-box">
+                        <button class="sub-tool-button">Calcolo Interessi Semplici</button>
+                        <div class="sub-tool-content">
+                            <input type="number" id="capitale" placeholder="Capitale">
+                            <input type="number" id="tasso" placeholder="Tasso di interesse (%)">
+                            <input type="number" id="anni" placeholder="Anni">
+                            <button onclick="calcolaInteressi()">Calcola</button>
+                            <p>Risultato: <span id="risultatoInteressi"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Salute -->
+            <div class="tool-box" data-tool="salute">
+                <button class="tool-button">Salute</button>
+                <div class="tool-content">
+                    <!-- Calcolo BMI -->
+                    <div class="sub-tool-box">
+                        <button class="sub-tool-button">Calcolo BMI</button>
+                        <div class="sub-tool-content">
+                            <input type="number" id="peso" placeholder="Peso (kg)">
+                            <input type="number" id="altezza" placeholder="Altezza (m)">
+                            <button onclick="calcolaBMI()">Calcola</button>
+                            <p>Risultato: <span id="risultatoBMI"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Varie -->
+            <div class="tool-box" data-tool="varie">
+                <button class="tool-button">Varie</button>
+                <div class="tool-content">
+                    <!-- Generatore di Password -->
+                    <div class="sub-tool-box">
+                        <button class="sub-tool-button">Generatore di Password</button>
+                        <div class="sub-tool-content">
+                            <button onclick="generaPassword()">Genera Password</button>
+                            <p>Password: <span id="passwordGenerata"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
