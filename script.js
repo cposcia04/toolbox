@@ -28,6 +28,27 @@ function calcolaMedia() {
     document.getElementById('risultatoMedia').textContent = media.toFixed(2);
 }
 
+// Funzione per risolvere un'equazione lineare ax + b = 0
+function equazioneLineare() {
+    // Prendi i valori di a e b dai campi di input
+    const a = parseFloat(document.getElementById('valoreA').value);
+    const b = parseFloat(document.getElementById('valoreB').value);
+    
+    // Controlla se a è diverso da zero (altrimenti l'equazione non è lineare)
+    if (a === 0) {
+        if (b === 0) {
+            document.getElementById('risultatoEquazioneLineare').textContent = 'L\'equazione ha infinite soluzioni';
+        } else {
+            document.getElementById('risultatoEquazioneLineare').textContent = 'L\'equazione non ha soluzioni';
+        }
+    } else {
+        // Calcola la soluzione per x
+        const x = -b / a;
+        document.getElementById('risultatoEquazioneLineare').textContent = 'x = ' + x.toFixed(2);
+    }
+}
+
+
 // Funzione per convertire metri a chilometri
 function convertiMetriChilometri() {
     const metri = parseFloat(document.getElementById('metri').value);
