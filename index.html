@@ -42,8 +42,7 @@
                         </div>
                     </div>
 
-                    
-                    <!--Media aritmetica-->
+                    <!-- Media aritmetica -->
                     <div class="sub-tool-box">
                         <button class="sub-tool-button">Media aritmetica</button>
                         <div class="sub-tool-content">
@@ -53,23 +52,20 @@
                             <p>Risultato: <span id="risultatoMedia"></span></p>
                         </div>
                     </div>
-                    
+
+                    <!-- Equazione lineare -->
+                    <div class="sub-tool-box">
+                        <button class="sub-tool-button">Equazione Lineare</button>
+                        <div class="sub-tool-content">
+                            <p>Un'equazione lineare di primo grado è nella forma ax+b=0. Inserisci i valori di a e b:</p>
+                            <input type="number" id="valoreA" placeholder="a">
+                            <input type="number" id="valoreB" placeholder="b">
+                            <button onclick="equazioneLineare()">Risolvi</button>
+                            <p>Risultato: <span id="risultatoEquazioneLineare"></span></p>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <!--Equazione lineare-->
-
-             <div class="sub-tool-box">
-        <button class="sub-tool-button">Equazione lineare</button>
-             <div class="sub-tool-content">
-             Un'equazione lineare di primo grado è nella forma ax+b=0, quindi 
-             inserire i valori di a e b. 
-                  <input type="number" id="valoreA" placeholder="a">
-                  <input type="number" id="valoreB" placeholder="b">
-                  <button onclick="equazioneLineare()">Risolvi</button>
-                  <p>Risultato: <span id="risultatoEquazioneLineare"></span></p>
-    </div>
-</div>
 
             <!-- Conversioni Unità -->
             <div class="tool-box" data-tool="conversioni">
@@ -142,4 +138,5 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
