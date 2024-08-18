@@ -1,5 +1,3 @@
-// script.js
-
 // Funzione per calcolare la percentuale
 function calcolaPercentuale() {
     const numero = parseFloat(document.getElementById('numero').value);
@@ -30,11 +28,9 @@ function calcolaMedia() {
 
 // Funzione per risolvere un'equazione lineare ax + b = 0
 function equazioneLineare() {
-    // Prendi i valori di a e b dai campi di input
     const a = parseFloat(document.getElementById('valoreA').value);
     const b = parseFloat(document.getElementById('valoreB').value);
-    
-    // Controlla se a è diverso da zero (altrimenti l'equazione non è lineare)
+
     if (a === 0) {
         if (b === 0) {
             document.getElementById('risultatoEquazioneLineare').textContent = 'L\'equazione ha infinite soluzioni';
@@ -42,12 +38,10 @@ function equazioneLineare() {
             document.getElementById('risultatoEquazioneLineare').textContent = 'L\'equazione non ha soluzioni';
         }
     } else {
-        // Calcola la soluzione per x
         const x = -b / a;
         document.getElementById('risultatoEquazioneLineare').textContent = 'x = ' + x.toFixed(2);
     }
 }
-
 
 // Funzione per convertire metri a chilometri
 function convertiMetriChilometri() {
@@ -61,8 +55,8 @@ function calcolaInteressi() {
     const capitale = parseFloat(document.getElementById('capitale').value);
     const tasso = parseFloat(document.getElementById('tasso').value);
     const anni = parseFloat(document.getElementById('anni').value);
-    const interessi = (capitale * tasso * anni) / 100;
-    document.getElementById('risultatoInteressi').textContent = interessi.toFixed(2);
+    const interesse = (capitale * tasso * anni) / 100;
+    document.getElementById('risultatoInteressi').textContent = 'Interessi: €' + interesse.toFixed(2);
 }
 
 // Funzione per calcolare il BMI
@@ -76,11 +70,11 @@ function calcolaBMI() {
 // Funzione per generare una password casuale
 function generaPassword() {
     const lunghezza = 12;
-    const caratteri = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const caratteri = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+~`|}{[]:;?><,./-=';
     let password = '';
     for (let i = 0; i < lunghezza; i++) {
-        const randIndex = Math.floor(Math.random() * caratteri.length);
-        password += caratteri[randIndex];
+        const carattereCasuale = Math.floor(Math.random() * caratteri.length);
+        password += caratteri.charAt(carattereCasuale);
     }
     document.getElementById('passwordGenerata').textContent = password;
 }
