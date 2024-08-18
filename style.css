@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #2a9d8f; /* Verde scuro */
     color: white;
     padding: 20px;
     text-align: center;
@@ -52,7 +52,7 @@ header h1 {
 }
 
 .tool-button {
-    background-color: #555;
+    background-color: #e76f51; /* Arancione scuro */
     color: white;
     padding: 20px;
     width: 100%;
@@ -66,7 +66,7 @@ header h1 {
 }
 
 .tool-button:hover {
-    background-color: #777;
+    background-color: #f4a261; /* Arancione chiaro */
 }
 
 .tool-content {
@@ -75,14 +75,14 @@ header h1 {
 }
 
 .sub-tool-box {
-    background-color: #f9f9f9;
+    background-color: #fefae0; /* Beige chiaro */
     margin-top: 10px;
     padding: 10px;
     border-radius: 5px;
 }
 
 .sub-tool-button {
-    background-color: #777;
+    background-color: #264653; /* Blu scuro */
     color: white;
     padding: 10px;
     width: 100%;
@@ -96,7 +96,7 @@ header h1 {
 }
 
 .sub-tool-button:hover {
-    background-color: #999;
+    background-color: #2a9d8f; /* Verde scuro */
 }
 
 .sub-tool-content {
